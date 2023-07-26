@@ -5,15 +5,15 @@ files:
     destination: /var/www/SampleApp
 hooks:
   BeforeInstall:
-    - location: scripts/setup_dirs.sh
+    - location: /scripts/setup_dirs.sh
       timeout: 300
       runas: root
   AfterInstall:
-    - location: scripts/setup_services.sh
-    - location: scripts/pipenv.sh
+    - location: /scripts/setup_services.sh
+    - location: /scripts/pipenv.sh
       timeout: 300
       runas: root
   ApplicationStart:
-    - location: scripts/start_server.sh
+    - location: /scripts/start_server.sh
       timeout: 300
       runas: root
