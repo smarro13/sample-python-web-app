@@ -7,7 +7,6 @@ systemctl enable mywebapp.uwsgi.service
 
 ## Copy the nginx config file, then ensure nginx starts at boot, and restart it to load the config
 #cp /var/www/SampleApp/nginx-app.conf /etc/nginx/conf.d/nginx-app.conf
-cp /var/www/SampleApp/nginx-app.conf /etc/systemd/system/nginx.service
 mkdir -p /var/log/nginx
 chown nginx:nginx /var/log/nginx
-systemctl enable nginx.service
+#systemctl enable nginx.service
